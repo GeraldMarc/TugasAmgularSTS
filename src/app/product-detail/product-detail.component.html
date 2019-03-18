@@ -1,0 +1,38 @@
+<p>
+  product-detail works!
+</p>
+<div>
+  <table *ngIf="product" class="center-element" border="1" id="product_detail">
+      <thead>
+          <tr>
+            <td>Images</td>
+            <td>ID</td>
+            <td>SKU</td>
+            <td>Name</td>
+            <td>Category</td>
+            <td>Description</td>
+            <td>Unit Price</td>
+          </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="modalImage">
+            <!-- LOAD MAIN IMAGE DULUAN -->
+            <ng-container *ngFor="let image of images">
+              <img *ngIf="image.main_image==true" class="main-image" [src]="image.product_image_url">
+            </ng-container>
+            <!-- LOAD SISA IMAGENYA -->
+            <ng-container *ngFor="let image of images">
+              <img *ngIf="image.main_image==false" class="product-image" [src]="image.product_image_url">
+            </ng-container>
+          </td>
+          <td> {{ product.id }} </td>
+          <td> {{ product.sku }} </td>
+          <td> {{ product.name }} </td>
+          <td> {{ product.category_name }} </td>
+          <td> {{ product.description }} </td>
+          <td> {{ product.unit_price }} </td>
+        </tr>
+      </tbody>
+  </table>
+</div>
