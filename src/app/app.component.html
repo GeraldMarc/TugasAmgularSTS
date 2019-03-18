@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -16,5 +16,19 @@
   <li>
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
-</ul>
+</ul> -->
+
+<div>
+  <section class="section">
+      <div class="container center-text">
+          <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+              <div class="navbar-menu is-active buttons">
+                  <button class="button is-link" [routerLink]="['']">Home</button>
+                  <button class="button is-link">Somewhere else</button>
+              </div>
+          </nav> -->
+          <router-outlet></router-outlet>
+      </div>
+  </section>
+</div>
 
