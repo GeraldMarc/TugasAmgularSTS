@@ -1,0 +1,46 @@
+<div>
+  <h2>Add New Product</h2>
+</div>
+<div>
+  <form [formGroupName]="addForm" id="form_product" enctype="multipart/form-data" (ngSubmit)="onSubmit()">
+      <div>
+          <span>Nama : </span>
+          <input type="text" formControlName="name">
+      </div>
+      <div>
+          <span>Description : </span>
+          <input type="textarea" formControlName="description">
+      </div>
+      <div>
+              <span>Unit Price : </span>
+              <input type="number" formControlName="unit_price">
+      </div>
+      <div>
+          <span>Category : </span>
+          <select formControlName="product_category_id">
+              <option value="0">Select Product Category</option>
+              <option value="1">Category 1</option>
+              <option value="2">Category 2</option>
+              <option value="3">Category 3</option>
+              <option value="4">Category 4</option>
+              <option value="5">Category 5</option>
+              <option value="6">Category 6</option>
+              <option value="7">Category 7</option>
+              <option value="8">Category 8</option>
+              <option value="9">Category 9</option>
+              <option value="10">Category 10</option>
+          </select>
+      </div>
+      <div>
+          <span>Main Image : </span>
+          <input type="file" formControlName="main_product_image">
+      </div>
+      <div>
+          <span>Additional Product Images (optional) : </span>
+          <input type="file" formControlName="product_image_list" multiple="multiple">
+      </div>
+      <div>
+          <button type="submit">Submit</button>
+      </div>
+  </form>
+</div>
